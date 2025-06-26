@@ -51,7 +51,6 @@ import p_img42 from './p_img42.png'
 import p_img43 from './p_img43.png'
 import p_img44 from './p_img44.png'
 import p_img45 from './p_img45.png'
-import p_img46 from './p_img46.png'
 import p_img47 from './p_img47.png'
 import p_img48 from './p_img48.png'
 import p_img49 from './p_img49.png'
@@ -589,7 +588,7 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716656345448,
-        bestseller: false
+        bestseller: true
     },
     {
         _id: "aaabp",
@@ -639,18 +638,7 @@ export const products = [
         date: 1716660745448,
         bestseller: true
     },
-    {
-        _id: "aaabt",
-        name: "blue oversized sweatshirt",
-        description: "The design consists of three sets of two circles, one on top of the other, with a small circle in the center of each. It's a casual style, suitable for everyday wear.",
-        price: 2499,
-        image: [p_img46],
-        category: "Men",
-        subCategory: "Winterwear",
-        sizes: ["S", "M", "L", "XL"],
-        date: 1716661845448,
-        bestseller: false
-    },
+
     {
         _id: "aaabu",
         name: "Casual Loose Fit Trousers",
