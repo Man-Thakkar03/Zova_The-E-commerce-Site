@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 import RelatedProducts from '../components/RelatedProducts';
+import { toast } from 'react-toastify';
 
 const Product = () => {
   const { productId } = useParams();
+  const navigate = useNavigate();
   const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState('');
@@ -86,12 +88,20 @@ const Product = () => {
             </div>
           </div>
 
-          <button
-            onClick={() => addToCart(productData._id, size)}
-            className='bg-black text-white px-10 py-3 text-sm rounded-md mt-4 font-semibold transition duration-300 hover:bg-neutral-900 active:scale-95 shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]'
-          >
-            ADD TO CART
-          </button>
+         <button
+  onClick={() => {
+    if (!size) {
+      toast.error("Please select a size before adding to cart.");
+      return;
+    }
+    addToCart(productData._id, size);
+    navigate('/cart');
+  }}
+  className='bg-black text-white px-10 py-3 text-sm rounded-md mt-4 font-semibold transition duration-300 hover:bg-neutral-900 active:scale-95 shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]'
+>
+  ADD TO CART
+</button>
+
 
           <hr className='mt-10 sm:w-4/5' />
           <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
