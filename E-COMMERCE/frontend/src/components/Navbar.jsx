@@ -49,10 +49,10 @@ const Navbar = () => {
       )}
 
       {/* Main Navbar */}
-      <div className={`w-full px-4 sm:px-6 py-4 bg-white border-b border-gray-200 transition-all duration-300 ${scrolled ? 'shadow-lg' : 'shadow-sm'} z-50 relative`}>
+      <div className={`w-full px-4 sm:px-6 py-3 bg-white border-b border-gray-100 transition-all duration-300 z-30 relative ${scrolled ? 'sm:shadow-md' : ''}`}>
         <div className="flex justify-between items-center max-w-[1400px] mx-auto">
 
-          {/* Logo with responsive size and margin */}
+          {/* Logo (smaller & tighter on mobile) */}
           <Link to="/" className="sm:ml-0 ml-[-6px]">
             <img 
               src={assets?.logo || '/fallback.png'} 
@@ -61,7 +61,7 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <ul className="hidden sm:flex gap-10 font-semibold">
             <li><NavLink to="/" className={navLinkClass}>Home</NavLink></li>
             <li><NavLink to="/collection" className={navLinkClass}>Collection <span className="ml-1 animate-pulse text-pink-500">★</span></NavLink></li>
@@ -95,7 +95,6 @@ const Navbar = () => {
                 alt="User" 
                 className="w-7 hover:scale-110 transition-transform duration-300" 
               />
-
               {token && (
                 <div className="absolute top-9 right-0 z-50 w-40 py-3 px-5 bg-white/90 backdrop-blur-md rounded-lg border border-gray-200 shadow-xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
                   <a href="#" onClick={(e) => e.preventDefault()}><p className="hover:text-pink-500 cursor-pointer">Source Code</p></a>
@@ -105,7 +104,7 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Hamburger Icon */}
+            {/* Mobile Menu Icon */}
             <img 
               onClick={() => setVisible(true)} 
               src={assets?.menu_icon || '/menu.png'} 
