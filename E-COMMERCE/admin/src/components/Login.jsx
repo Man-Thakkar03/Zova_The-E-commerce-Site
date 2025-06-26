@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { backendUrl } from '../App';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom'; // ← import this
+import { useNavigate } from 'react-router-dom';
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // ← hook for redirection
+  const navigate = useNavigate(); 
 
   const onSubmitHandler = async (e) => {
     try {
@@ -15,7 +15,7 @@ const Login = ({ setToken }) => {
       const response = await axios.post(backendUrl + '/api/user/admin', { email, password });
       if (response.data.success) {
         setToken(response.data.token);
-        navigate('/add'); // ← redirect to Add.jsx
+        navigate('/add'); 
       } else {
         toast.error(response.data.message);
       }
