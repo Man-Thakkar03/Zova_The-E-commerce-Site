@@ -39,18 +39,19 @@ const Product = () => {
       {/* Product Section */}
       <div className='flex gap-12 flex-col sm:flex-row'>
         {/* Images */}
-        <div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row'>
+        <div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row sm:gap-5'>
           <div className='flex sm:flex-col overflow-x-auto sm:overflow-y-scroll sm:w-[18.7%] w-full'>
             {productData.image.map((item, index) => (
               <img
-                onClick={() => setImage(item)}
-                src={item}
-                key={index}
-                className={`w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer transition duration-300 rounded-lg hover:shadow-md ${
-                  item === image ? 'ring-2 ring-orange-500' : ''
-                }`}
-                alt=''
-              />
+  onClick={() => setImage(item)}
+  src={item}
+  key={index}
+  className={`w-[24%] sm:w-full mr-5 last:mr-0 sm:mb-4 flex-shrink-0 cursor-pointer transition duration-300 rounded-lg hover:shadow-md ${
+    item === image ? 'ring-2 ring-orange-500' : ''
+  }`}
+  alt=''
+/>
+
             ))}
           </div>
           <div className='w-full sm:w-[80%]'>
