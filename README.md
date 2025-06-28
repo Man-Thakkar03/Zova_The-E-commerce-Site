@@ -91,7 +91,6 @@ E-COMMERCE/
 ### 🧩 Prerequisites
 
 - Node.js ≥ 16.x
-- MongoDB Atlas URI
 - npm / yarn
 
 ### 🧪 Backend
@@ -100,7 +99,6 @@ E-COMMERCE/
 cd backend
 npm install
 # Create .env file with:
-# MONGODB_URL = "mongodb+srv://manthakkar2005:Manthakkar.39@cluster0.2uspafe.mongodb.net"
 # PORT=4000
 npm run server
 ```
@@ -130,16 +128,6 @@ npm start
 ```
 
 Dashboard: [http://localhost:5174](http://localhost:5174)
-
----
-
-## 🔐 Example `.env` (Backend)
-
-```env
-MONGODB_URL = "mongodb+srv://manthakkar2005:Manthakkar.39@cluster0.2uspafe.mongodb.net"
-PORT=4000
-JWT_SECRET ="manthakkar2005"
-```
 
 ---
 
