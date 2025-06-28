@@ -97,7 +97,7 @@ const Navbar = () => {
               />
               {token && (
                 <div className="absolute top-9 right-0 z-50 w-40 py-3 px-5 bg-white/90 backdrop-blur-md rounded-lg border border-gray-200 shadow-xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
-                  <a href="#" onClick={(e) => e.preventDefault()}><p className="hover:text-pink-500 cursor-pointer">Source Code</p></a>
+                  <a href="https://github.com/Man-Thakkar03/Codealpha_E-commerce-Store/tree/main/E-COMMERCE" onClick={(e) => e.preventDefault()}><p className="hover:text-pink-500 cursor-pointer">Source Code</p></a>
                   <p onClick={() => navigate('/orders')} className="hover:text-pink-500 cursor-pointer">Orders</p>
                   <p onClick={logout} className="hover:text-red-500 cursor-pointer">Logout</p>
                 </div>
