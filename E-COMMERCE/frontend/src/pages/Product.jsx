@@ -46,7 +46,7 @@ const Product = () => {
   onClick={() => setImage(item)}
   src={item}
   key={index}
-  className={`w-[24%] sm:w-full mr-5 last:mr-0 sm:mb-4 flex-shrink-0 cursor-pointer transition duration-300 rounded-lg hover:shadow-md ${
+  className={`w-[24%] sm:w-full mr-3 last:mr-0 sm:mb-4 flex-shrink-0 cursor-pointer transition duration-300 rounded-lg hover:shadow-md ${
     item === image ? 'ring-2 ring-orange-500' : ''
   }`}
   alt=''
