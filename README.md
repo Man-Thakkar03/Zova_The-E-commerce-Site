@@ -145,7 +145,7 @@ JWT_SECRET ="manthakkar2005"
 
 ## 📸 Screenshots
 
--> Zova Home page1 ![Zova Home page1](https://github.com/user-attachments/assets/a871d21e-f273-4681-9f74-9e65e5e1cc8b)
+-> Zova Home page1 ![Zova Home page1](https://github.com/user-attachments/assets/01fc4239-9614-4779-88bb-7bafec58a37a)
 
 -> Zova Home page2 ![Zova Home page2](https://github.com/user-attachments/assets/25a2e1ed-266e-401a-a7c8-50f55423dc9b)
 
