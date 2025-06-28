@@ -145,41 +145,43 @@ JWT_SECRET ="manthakkar2005"
 
 ## 📸 Screenshots
 
--> ![Zova Home page1](https://github.com/user-attachments/assets/a871d21e-f273-4681-9f74-9e65e5e1cc8b)
+-> Zova Home page1 ![Zova Home page1](https://github.com/user-attachments/assets/a871d21e-f273-4681-9f74-9e65e5e1cc8b)
 
--> ![Zova Home page2](https://github.com/user-attachments/assets/25a2e1ed-266e-401a-a7c8-50f55423dc9b)
+-> Zova Home page2 ![Zova Home page2](https://github.com/user-attachments/assets/25a2e1ed-266e-401a-a7c8-50f55423dc9b)
 
--> ![Zova Home page3](https://github.com/user-attachments/assets/92a6dbbd-06b9-4f67-9539-143ee26969de)
+-> Zova Home page3 ![Zova Home page3](https://github.com/user-attachments/assets/92a6dbbd-06b9-4f67-9539-143ee26969de)
 
--> ![Zova Home page4](https://github.com/user-attachments/assets/5c874e8b-72c8-4286-9d79-ebc2bc06ad17)
+-> Zova Home page4 ![Zova Home page4](https://github.com/user-attachments/assets/5c874e8b-72c8-4286-9d79-ebc2bc06ad17)
 
--> ![Zova Collection page](https://github.com/user-attachments/assets/be8e2ae4-5960-438f-98ac-cc9803a7392f)
+-> Zova Collection page ![Zova Collection page](https://github.com/user-attachments/assets/be8e2ae4-5960-438f-98ac-cc9803a7392f)
 
--> ![Zova About page](https://github.com/user-attachments/assets/7966785f-45d9-44d7-9295-ac753d69eee3)
+-> Zova About page ![Zova About page](https://github.com/user-attachments/assets/7966785f-45d9-44d7-9295-ac753d69eee3)
 
--> ![Zova Contact page](https://github.com/user-attachments/assets/ae15b293-2c4a-447b-9627-fe0867e2e8a9)
+-> Zova Contact page ![Zova Contact page](https://github.com/user-attachments/assets/ae15b293-2c4a-447b-9627-fe0867e2e8a9)
 
--> ![Zova Product Page1](https://github.com/user-attachments/assets/91dea618-df39-44d4-9e93-19856574fc35)
+-> Zova Product Page1 ![Zova Product Page1](https://github.com/user-attachments/assets/91dea618-df39-44d4-9e93-19856574fc35)
 
--> ![Zova Product page2](https://github.com/user-attachments/assets/14c06877-f0b0-4e92-acdc-10c69c70b8d7)
+-> Zova Product page2 ![Zova Product page2](https://github.com/user-attachments/assets/14c06877-f0b0-4e92-acdc-10c69c70b8d7)
 
--> ![Zova Cart page](https://github.com/user-attachments/assets/027b65f4-3757-46a2-9560-0fd234fdb7f4)
+-> Zova Cart page ![Zova Cart page](https://github.com/user-attachments/assets/027b65f4-3757-46a2-9560-0fd234fdb7f4)
 
--> ![Zova PlaceOrder page](https://github.com/user-attachments/assets/d0bde5e1-fed1-446a-9389-97df00e852e8)
+-> Zova PlaceOrder page ![Zova PlaceOrder page](https://github.com/user-attachments/assets/d0bde5e1-fed1-446a-9389-97df00e852e8)
 
--> ![Zova Orders page](https://github.com/user-attachments/assets/3ea3964e-0e99-4990-b336-a1d0f428911d)
+-> Zova Orders page ![Zova Orders page](https://github.com/user-attachments/assets/3ea3964e-0e99-4990-b336-a1d0f428911d)
 
--> ![Zova Signup page](https://github.com/user-attachments/assets/3c1c8253-2e69-41d0-a391-c4b8ca7dee6e)
+-> Zova Signup page ![Zova Signup page](https://github.com/user-attachments/assets/3c1c8253-2e69-41d0-a391-c4b8ca7dee6e)
 
 
+## Admin Dashboard
 
--> ![Zova-Admin Login page](https://github.com/user-attachments/assets/7f4ada39-8136-4fdd-af9c-e9eab6284344)
 
--> ![Zova-Admin Add item page](https://github.com/user-attachments/assets/ba3dda75-1de2-42cb-aa8e-d5df13f2b2aa)
+-> Zova-Admin Login page ![Zova-Admin Login page](https://github.com/user-attachments/assets/7f4ada39-8136-4fdd-af9c-e9eab6284344)
 
--> ![Zova-Admin List items page](https://github.com/user-attachments/assets/e4fd357b-9d6f-4088-963f-fd29f4b3be8a)
+-> Zova-Admin Add item page ![Zova-Admin Add item page](https://github.com/user-attachments/assets/ba3dda75-1de2-42cb-aa8e-d5df13f2b2aa)
 
--> ![Zova-Admin Orders page](https://github.com/user-attachments/assets/f3e34bc2-ae5f-47bc-9f23-c3a6d1cb827d)
+-> Zova-Admin List items page ![Zova-Admin List items page](https://github.com/user-attachments/assets/e4fd357b-9d6f-4088-963f-fd29f4b3be8a)
+
+-> Zova-Admin Orders page ![Zova-Admin Orders page](https://github.com/user-attachments/assets/f3e34bc2-ae5f-47bc-9f23-c3a6d1cb827d)
 
 
 
