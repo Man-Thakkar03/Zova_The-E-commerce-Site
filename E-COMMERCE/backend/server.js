@@ -1,4 +1,3 @@
-// All your existing imports
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
@@ -12,15 +11,18 @@ import productRouter from './routes/productRoute.js';
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRote.js';
 
+// Enable __dirname in ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 4000;
 
+// DB and Cloudinary
 connectDB();
 connectCloudinary();
 
+// Middleware
 app.use(express.json());
 app.use(cors());
 app.use('/uploads', express.static('uploads'));
@@ -31,16 +33,14 @@ app.use('/api/product', productRouter);
 app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
 
-// Serve frontend
-app.use(express.static(path.join(__dirname, '/frontend/dist')));
+// ✅ Serve static React frontend (user + admin)
+app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
+
+// ✅ Catch-all route — let React handle all other frontend routes
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
 });
 
-// Serve admin panel
-app.use('/admin', express.static(path.join(__dirname, 'admin', 'dist')));
-app.get('/admin/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'admin', 'dist', 'index.html'));
+app.listen(port, () => {
+  console.log(`🚀 Server started on port ${port}`);
 });
-
-app.listen(port, () => console.log("🚀 Server started on port: " + port));
