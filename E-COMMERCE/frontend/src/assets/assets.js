@@ -102,7 +102,7 @@ export const products = [
         _id: "aaaaa",
         name: "Vintage Vine Crop Top",
         description: "A sleeveless, cropped cotton top with a square neckline and a blue floral print on a white base. Designed for casual summer wear, it pairs perfectly with denim and adds a fresh, minimal yet bold aesthetic to any outfit.",
-        price: 2499,
+        price: 2497,
         image: [p_img1_1,p_img1_2],
         category: "Women",
         subCategory: "Topwear",
@@ -162,7 +162,7 @@ export const products = [
         _id: "aaaaf",
         name: "Ivory Slit Layer Top",
         description: "Effortlessly chic, this longline sleeveless top features delicate scallop-edge straps and a statement front slit for layered perfection. Button detailing down the front adds a vintage touch, while the breezy cotton-linen blend makes it an easy essential for summer days. Pair it with flared denims or straight pants for a relaxed yet bold silhouette.",
-        price: 2699,
+        price: 2999,
         image: [p_img6_1,p_img6_2,p_img6_3],
         category: "Women",
         subCategory: "Topwear",
@@ -588,7 +588,7 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716656345448,
-        bestseller: true
+        bestseller: false
     },
     {
         _id: "aaabp",
