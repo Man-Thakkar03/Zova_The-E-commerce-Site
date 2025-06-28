@@ -215,7 +215,6 @@ JWT_SECRET ="manthakkar2005"
 
 **Man Thakkar**  
 🚀 [GitHub](https://github.com/Man-Thakkar03)  
-🌐 [Portfolio](https://your-portfolio-link.com)
 
 ---
 
