@@ -37,4 +37,10 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
 });
 
+// Serve admin panel
+app.use('/admin', express.static(path.join(__dirname, 'admin', 'dist')));
+app.get('/admin/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'admin', 'dist', 'index.html'));
+});
+
 app.listen(port, () => console.log("🚀 Server started on port: " + port));
