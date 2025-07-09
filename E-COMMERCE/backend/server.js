@@ -10,7 +10,6 @@ import userRouter from './routes/userRoute.js';
 import productRouter from './routes/productRoute.js';
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRote.js';
-import { Server } from 'http';
 
 // Enable __dirname in ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -26,16 +25,29 @@ connectCloudinary();
 // ✅ Middlewares
 app.use(express.json());
 
-// ✅ CORS: allow frontend + admin Render domains
+// ✅ CORS Configuration
+const allowedOrigins = [
+  'https://zova.onrender.com',
+  'https://zova-admin.onrender.com'
+];
+
 app.use(cors({
-  origin: [
-    'https://zova.onrender.com',
-    'https://zova-admin.onrender.com'
-  ],
-  credentials: true
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'token']
 }));
 
-// ✅ Serve static uploads
+// ✅ Handle preflight requests
+app.options('*', cors());
+
+// ✅ Serve static uploads (if needed)
 app.use('/uploads', express.static('uploads'));
 
 // ✅ API Routes
@@ -44,9 +56,9 @@ app.use('/api/product', productRouter);
 app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
 
-// ✅ Do NOT serve React here — frontend is deployed separately
+// ✅ Do NOT serve React here — it's deployed separately
 
-// ✅ Start the server
+// ✅ Start server
 app.listen(port, () => {
   console.log(`🚀 Server started on port ${port}`);
 });
