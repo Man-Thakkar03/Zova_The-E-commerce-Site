@@ -92,6 +92,8 @@ const ShopContextProvider = (props) => {
         }
       }
 
+      
+
       const getCartAmount = () =>{
         let totalAmount = 0;
         for(const items in cartItems){
@@ -156,22 +158,7 @@ const ShopContextProvider = (props) => {
         getCartCount,updateQuantity,
         getCartAmount, navigate, backendUrl , setToken ,token
   }
-  const getProductsData = async ()=> {
-  try {
-    const response = await axios.get(backendUrl + '/api/product/list');
-    console.log("🟡 API response:", response.data); // <--- ADD THIS
-
-    if (response.data.success) {
-      setProducts(response.data.products);
-    } else {
-      toast.error(response.data.message);
-    }
-  } catch (error) {
-    console.log("🔴 Fetch error:", error);
-    toast.error(error.message);
-  }
-};
-
+  
 
   return(
     <ShopContext.Provider value={value}>
