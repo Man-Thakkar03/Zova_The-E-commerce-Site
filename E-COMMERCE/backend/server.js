@@ -10,6 +10,7 @@ import userRouter from './routes/userRoute.js';
 import productRouter from './routes/productRoute.js';
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRote.js';
+import { Server } from 'http';
 
 // Enable __dirname in ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -18,29 +19,34 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = process.env.PORT || 4000;
 
-// DB and Cloudinary
+// Connect to DB and Cloudinary
 connectDB();
 connectCloudinary();
 
-// Middleware
+// ✅ Middlewares
 app.use(express.json());
-app.use(cors());
+
+// ✅ CORS: allow frontend + admin Render domains
+app.use(cors({
+  origin: [
+    'https://zova.onrender.com',
+    'https://zova-admin.onrender.com'
+  ],
+  credentials: true
+}));
+
+// ✅ Serve static uploads
 app.use('/uploads', express.static('uploads'));
 
-// API Routes
+// ✅ API Routes
 app.use('/api/user', userRouter);
 app.use('/api/product', productRouter);
 app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
 
-// ✅ Serve static React frontend (user + admin)
-app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
+// ✅ Do NOT serve React here — frontend is deployed separately
 
-// ✅ Catch-all route — let React handle all other frontend routes
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
-});
-
+// ✅ Start the server
 app.listen(port, () => {
   console.log(`🚀 Server started on port ${port}`);
 });
