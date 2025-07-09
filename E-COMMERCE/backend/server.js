@@ -18,47 +18,29 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = process.env.PORT || 4000;
 
-// Connect to DB and Cloudinary
+// DB and Cloudinary
 connectDB();
 connectCloudinary();
 
-// ✅ Middlewares
+// Middleware
 app.use(express.json());
-
-// ✅ CORS Configuration
-const allowedOrigins = [
-  'https://zova.onrender.com',
-  'https://zova-admin.onrender.com'
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'token']
-}));
-
-// ✅ Handle preflight requests
-app.options('*', cors());
-
-// ✅ Serve static uploads (if needed)
+app.use(cors());
 app.use('/uploads', express.static('uploads'));
 
-// ✅ API Routes
+// API Routes
 app.use('/api/user', userRouter);
 app.use('/api/product', productRouter);
 app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
 
-// ✅ Do NOT serve React here — it's deployed separately
+// ✅ Serve static React frontend (user + admin)
+app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
 
-// ✅ Start server
+// ✅ Catch-all route — let React handle all other frontend routes
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
+});
+
 app.listen(port, () => {
   console.log(`🚀 Server started on port ${port}`);
 });
