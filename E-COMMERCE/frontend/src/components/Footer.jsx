@@ -38,7 +38,7 @@ const Footer = () => {
         <div>
           <p className="text-xl font-semibold mb-5 tracking-wide">START THE VIBE</p>
           <ul className="flex flex-col gap-3 text-gray-600">
-            <li className="hover:text-rose-500 transition-all duration-300">+91-93273-81425</li>
+            {/*<li className="hover:text-rose-500 transition-all duration-300">+91-93273-81425</li>
             <li className="hover:text-rose-500 transition-all duration-300">manthakkar2005@gmail.com</li>
             <li className="hover:text-rose-500 transition-all duration-300">
               <a
@@ -49,7 +49,7 @@ const Footer = () => {
               >
                 Instagram
               </a>
-            </li>
+            </li>*/}
           </ul>
         </div>
       </div>
